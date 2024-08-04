@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --light-yellow: #fbffa7;
+    --light-blue: #b1c5ff; 
+    --light-green: #b6ffc0;
+    --light-orange: #ff764d;
+    --light-purple: #d5b3ff;
+    --dark-blue: #0000ff;
+    --heading-font: "Work Sans", sans-serif;
+    --body-font: "Work Sans", sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--heading-font);
+}
+
+/* .container, header, main, footer, .section { max-width: 350px; width: 100%; } */
+
+h2, p { font-size: 1rem; padding: 1rem 0; }
+
+ul, ol, li { list-style: none; }
+
+img, picture { max-width: 100%; display: block; }
+
+header {
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo { max-width: 60px; }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.main-nav ul { display: flex; gap: 1rem; }
+
+.main-nav li a, a {
+  text-decoration: none;
+  color: #000;
+  font-weight: var(--font-weight-regular);
+}
+
+a:hover, .main-nav li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cta-buttons { display: flex; gap: 1rem; }
+
+.button {
+  background-color: var(--dark-purple);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover { background-color: var(--grayish-purple); }
+
+.background-img {
+  background: url(../images/header-img.avif) center/contain no-repeat;
+  max-width: 350px;
+  height: 250px;
+  position: relative;
+}
+
+.hero > h1 {
+  text-transform: uppercase;
+  color: var(--light-orange);
+  font-family: var(--heading-font);
+  letter-spacing: 0.1rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.intro { padding-top: 1rem; }
+
+span { color: var(--dark-blue); }
+
+.collage-products, .collage-products-2, .collage-products-3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.collage-products { height: 500px; }
+.collage-products-2, .collage-products-3 { height: 700px; }
+
+.color-lemonade, .color-mint, .color-purple {
+  width: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+.color-lemonade { background-color: var(--light-yellow); height: 400px; }
+.color-mint { background-color: var(--light-green); height: 700px; }
+.color-purple { background-color: var(--light-purple); height: 700px; }
+
+.img-one, .img-two, .img-three, .img-four, .img-five, .img-six, .img-seven {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  z-index: 2;
+}
+
+.video-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.video-section p {
+  align-self: flex-start;
+  margin-top: -1rem;
+  margin-left: 0.75rem;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+iframe {
+  border-style: none;
+}
+
+
+.img-one { background-image: url(../images/photo-1.jpg); left: 0; transform: translateX(-30%); bottom: 55%; }
+.img-two { background-image: url(../images/photo-2.jpg); right: 0; transform: translateX(50%); top: 50%; }
+.img-three { background-image: url(../images/photo-3.jpg); right: 0; transform: translateX(-30%); top: 10%; }
+.img-four { background-image: url(../images/photo-4.jpg); right: 0; transform: translateX(50%); top: 40%; z-index: 5; }
+.img-five { background-image: url(../images/photo-5.jpg); right: 0; transform: translateX(-20%); top: 60%; z-index: 6; }
+.img-six { background-image: url(../images/photo-7.jpg); left: 10; transform: translateX(-30%); top: 10%; }
+.img-seven { background-image: url(../images/photo-8.jpg); right: 0; transform: translateX(20%); top: 50%; z-index: 5; }
+
+.office-img {
+  background: url(../images/photo-6-a.jpg) center/cover no-repeat;
+  width: 350px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.color-blue {
+  background-color: var(--light-blue);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+}
+
+.img-eight {
+  background: url(../images/poster-meet-the-makers.avif) center/cover no-repeat;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.socials a img {
+  max-width: 25px;
+  height: 25px;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.socials a { padding: 0.25rem; }
+
+h3 { margin: 1rem 0; }
+
+.trademark {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+select { margin-top: 1rem; }
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle { display: block; }
+
+body {
+  max-width: 1000;
+}
+
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  .main-nav.active { display: block; }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 0;
+  }
+
+  .main-nav li { margin-bottom: 1rem; }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+
+  .cta-buttons .btn { margin-bottom: 1rem; }
+
+  body.menu-open { overflow: hidden; }
+}
